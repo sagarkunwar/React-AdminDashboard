@@ -13,13 +13,16 @@ import BookIcon from "@mui/icons-material/Book";
 import SettingsIcon from "@mui/icons-material/Settings";
 import PersonIcon from "@mui/icons-material/Person";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">Tokari Admin</span>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="logo">Tokari Admin</span>
+        </Link>
       </div>
-      <hr />
+      <hr className="underline" />
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
@@ -27,9 +30,13 @@ function Sidebar() {
             <DashboardIcon className="icons" />
             <span>Dashboard</span>
           </li>
+
+          <p className="title">LISTS</p>
           <li>
             <AccountCircleIcon className="icons" />
-            <span>Users</span>
+            <Link to="/user">
+              <span>Users</span>
+            </Link>
           </li>
           <li>
             <Inventory2Icon className="icons" />
@@ -37,9 +44,13 @@ function Sidebar() {
           </li>
           <li>
             <LocalShippingIcon className="icons" />
+            <span>Orders</span>
+          </li>
+          <li>
+            <LocalShippingIcon className="icons" />
             <span>Delivery</span>
           </li>
-          <p className="title">LISTS</p>
+          <p className="title">USEFUL</p>
 
           <li>
             <AnalyticsIcon className="icons" />
@@ -75,7 +86,11 @@ function Sidebar() {
           </li>
         </ul>
       </div>
-      <div className="buttom">color option</div>
+      <p className="title2">THEME</p>
+      <div className="buttom">
+        <div className="colorOption"></div>
+        <div className="colorOption"></div>
+      </div>
     </div>
   );
 }

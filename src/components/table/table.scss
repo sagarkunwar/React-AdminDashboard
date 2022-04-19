@@ -1,0 +1,32 @@
+.table {
+  // -webkit-box-shadow: 7px 10px 17px -9px #000000;
+  // box-shadow: 7px 10px 17px -9px #000000;
+  // border-radius: 10px;
+  // border: green solid 2px;
+  .cellWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .image {
+      margin: 10px;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+  }
+  .status {
+    padding: 5px;
+    border-radius: 10px;
+
+    &.Approved {
+      color: green;
+      border: green solid 2px;
+    }
+
+    &.Pending {
+      color: red;
+      border: rgb(255, 0, 0) solid 2px;
+    }
+  }
+}
